@@ -1,1 +1,1 @@
-# ttrpg-dice-roller
+# dice-roller
