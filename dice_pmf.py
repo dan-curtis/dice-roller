@@ -6,7 +6,7 @@ import seaborn as sns
 
 def get_pmf(m,n,c):
     '''mDn+c = 3D6+2
-    m=1
+    m=2
     n=6
     c=2
     '''
@@ -33,7 +33,8 @@ def get_pmf(m,n,c):
     result_list = []
     for i in set(list(zip(*final_list))[0]):
         result_list.append([i,0])
-
+    for ix,i in enumerate(result_list):
+        result_list[ix] = [i[0],sum([j[1] for j in final_list if j[0]==i[0]])]
 
     return [test_list, final_list, result_list]
 
